@@ -45,6 +45,8 @@ namespace StargateAPI.Controllers
         {
             try
             {
+                if (string.IsNullOrEmpty(name)) return BadRequest("Name parameter is required.");
+
                 var result = await _mediator.Send(new GetPersonByName()
                 {
                     Name = name
@@ -68,6 +70,8 @@ namespace StargateAPI.Controllers
         {
             try
             {
+                if (string.IsNullOrEmpty(name)) return BadRequest("Name parameter is required.");
+
                 var result = await _mediator.Send(new CreatePerson()
                 {
                     Name = name

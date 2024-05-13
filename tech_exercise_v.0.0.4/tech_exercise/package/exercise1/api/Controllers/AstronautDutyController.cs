@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using StargateAPI.Business.Commands;
 using StargateAPI.Business.Queries;
 using System.Net;
+using System.Threading;
 
 namespace StargateAPI.Controllers
 {
@@ -21,6 +22,8 @@ namespace StargateAPI.Controllers
         {
             try
             {
+                if (string.IsNullOrEmpty(name)) return BadRequest("Name parameter is required.");
+
                 var result = await _mediator.Send(new GetAstronautDutiesByName()
                 {
                     Name = name
@@ -42,8 +45,11 @@ namespace StargateAPI.Controllers
         [HttpPost("")]
         public async Task<IActionResult> CreateAstronautDuty([FromBody] CreateAstronautDuty request)
         {
-                var result = await _mediator.Send(request);
-                return this.GetResponse(result);           
+            if (request is null) throw new ArgumentNullException(nameof(request), "Request object cannot be null.");
+
+            var result = await _mediator.Send(request);
+
+            return this.GetResponse(result);           
         }
     }
 }

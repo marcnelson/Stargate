@@ -22,6 +22,9 @@ namespace StargateAPI.Business.Queries
 
         public async Task<GetAstronautDutiesByNameResult> Handle(GetAstronautDutiesByName request, CancellationToken cancellationToken)
         {
+            if (request is null) throw new ArgumentNullException(nameof(request), "Request object cannot be null.");
+
+            if (cancellationToken == default) throw new ArgumentException("Invalid cancellation token.", nameof(cancellationToken));
 
             var result = new GetAstronautDutiesByNameResult();
 

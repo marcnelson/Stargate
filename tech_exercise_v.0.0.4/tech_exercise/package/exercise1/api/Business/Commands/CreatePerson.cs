@@ -20,6 +20,10 @@ namespace StargateAPI.Business.Commands
         }
         public Task Process(CreatePerson request, CancellationToken cancellationToken)
         {
+            if (request is null) throw new ArgumentNullException(nameof(request), "Request object cannot be null.");
+
+            if (cancellationToken == default) throw new ArgumentException("Invalid cancellation token.", nameof(cancellationToken));
+
             var person = _context.People.AsNoTracking().FirstOrDefault(z => z.Name == request.Name);
 
             if (person is not null) throw new BadHttpRequestException("Bad Request");
@@ -38,20 +42,23 @@ namespace StargateAPI.Business.Commands
         }
         public async Task<CreatePersonResult> Handle(CreatePerson request, CancellationToken cancellationToken)
         {
+            if (request is null) throw new ArgumentNullException(nameof(request), "Request object cannot be null.");
 
-                var newPerson = new Person()
-                {
-                   Name = request.Name
-                };
+            if (cancellationToken == default) throw new ArgumentException("Invalid cancellation token.", nameof(cancellationToken));
 
-                await _context.People.AddAsync(newPerson);
+            var newPerson = new Person()
+            {
+                Name = request.Name
+            };
 
-                await _context.SaveChangesAsync();
+            await _context.People.AddAsync(newPerson);
 
-                return new CreatePersonResult()
-                {
-                    Id = newPerson.Id
-                };
+            await _context.SaveChangesAsync();
+
+            return new CreatePersonResult()
+            {
+                Id = newPerson.Id
+            };
           
         }
     }
