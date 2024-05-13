@@ -19,6 +19,7 @@ namespace StargateAPI.Business.Data
         {
             modelBuilder.ApplyConfigurationsFromAssembly(typeof(StargateContext).Assembly);
 
+            // I cannot get this seed data to work.  I've spent WAY to much time on it.  Moving on.
             //SeedData(modelBuilder);
 
             base.OnModelCreating(modelBuilder);
@@ -31,39 +32,39 @@ namespace StargateAPI.Business.Data
                 .HasData(
                     new Person
                     {
-                        Id = 1,
+                        Id = -1,
                         Name = "John Doe"
                     },
                     new Person
                     {
-                        Id = 2,
+                        Id = -2,
                         Name = "Jane Doe"
                     }
                 );
 
-            modelBuilder.Entity<AstronautDetail>()
-                .HasData(
-                    new AstronautDetail
-                    {
-                        Id = 1,
-                        PersonId = 1,
-                        CurrentRank = "1LT",
-                        CurrentDutyTitle = "Commander",
-                        CareerStartDate = DateTime.Now
-                    }
-                );
+            //modelBuilder.Entity<AstronautDetail>()
+            //    .HasData(
+            //        new AstronautDetail
+            //        {
+            //            Id = 1,
+            //            PersonId = 1,
+            //            CurrentRank = "1LT",
+            //            CurrentDutyTitle = "Commander",
+            //            CareerStartDate = DateTime.Now
+            //        }
+            //    );
 
-            modelBuilder.Entity<AstronautDuty>()
-                .HasData(
-                    new AstronautDuty
-                    {
-                        Id = 1,
-                        PersonId = 1,
-                        DutyStartDate = DateTime.Now,
-                        DutyTitle = "Commander",
-                        Rank = "1LT"
-                    }
-                );
+            //modelBuilder.Entity<AstronautDuty>()
+            //    .HasData(
+            //        new AstronautDuty
+            //        {
+            //            Id = 1,
+            //            PersonId = 1,
+            //            DutyStartDate = DateTime.Now,
+            //            DutyTitle = "Commander",
+            //            Rank = "1LT"
+            //        }
+            //    );
         }
     }
 }

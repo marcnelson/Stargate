@@ -1,0 +1,8 @@
+<h4>Demo works!</h4>
+
+<p>To begin, select an Astronaut from the list:</p>
+<select [(ngModel)]="selectedAstronaut" (change)="onSelectionChange()">
+    <option *ngFor="let astronaut of astronauts" [value]="astronaut.name">{{ option.name }}</option>
+  </select>
+
+<button (click)="onClick()">Click Me</button>

@@ -34,9 +34,22 @@ namespace StargateAPI.Business.Commands
 
             if (person is null) throw new BadHttpRequestException("Bad Request");
 
-            var verifyNoPreviousDuty = _context.AstronautDuties.FirstOrDefault(z => z.DutyTitle == request.DutyTitle && z.DutyStartDate == request.DutyStartDate);
+            var verifyNoPreviousDuty = _context.AstronautDuties.FirstOrDefault(z => 
+            z.DutyTitle == request.DutyTitle && 
+            z.DutyStartDate.Date == request.DutyStartDate.Date &&
+            z.Rank == request.Rank);
 
             if (verifyNoPreviousDuty is not null) throw new BadHttpRequestException("Bad Request");
+
+            var currentDuty = _context.AstronautDuties
+                .Where(z => z.PersonId == person.Id)
+                .OrderByDescending(z => z.DutyStartDate)
+                .ThenByDescending(z => z.Id)
+                .FirstOrDefault();
+
+            if (currentDuty is not null && 
+                currentDuty.DutyTitle is not "RETIRED" && 
+                currentDuty.DutyEndDate is not null) throw new BadHttpRequestException("Bad Request");
 
             return Task.CompletedTask;
         }
@@ -87,9 +100,11 @@ namespace StargateAPI.Business.Commands
                 _context.AstronautDetails.Update(astronautDetail);
             }
 
-            query = $"SELECT * FROM [AstronautDuty] WHERE {person.Id} = PersonId Order By DutyStartDate Desc";
-
-            var astronautDuty = await _context.Connection.QueryFirstOrDefaultAsync<AstronautDuty>(query);
+            var astronautDuty = _context.AstronautDuties
+                .Where(z => z.PersonId == person.Id)
+                .OrderByDescending(z => z.DutyStartDate)
+                .ThenByDescending(z => z.Id)
+                .FirstOrDefault();
 
             if (astronautDuty != null)
             {

@@ -1,0 +1,264 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Work\\Tutorials\\tech_review\\tech_exercise_v.0.0.4\\tech_exercise\\package\\exercise1\\client\\StargateClient\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{9EA080BF-FDF5-4E6C-A9E4-BBCCD62C91D9}|..\\..\\api\\StargateAPI.csproj|c:\\work\\tutorials\\tech_review\\tech_exercise_v.0.0.4\\tech_exercise\\package\\exercise1\\api\\business\\commands\\createastronautduty.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9EA080BF-FDF5-4E6C-A9E4-BBCCD62C91D9}|..\\..\\api\\StargateAPI.csproj|c:\\work\\tutorials\\tech_review\\tech_exercise_v.0.0.4\\tech_exercise\\package\\exercise1\\api\\business\\queries\\getastronautdutiesbyname.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9EA080BF-FDF5-4E6C-A9E4-BBCCD62C91D9}|..\\..\\api\\StargateAPI.csproj|c:\\work\\tutorials\\tech_review\\tech_exercise_v.0.0.4\\tech_exercise\\package\\exercise1\\api\\business\\commands\\createperson.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9EA080BF-FDF5-4E6C-A9E4-BBCCD62C91D9}|..\\..\\api\\StargateAPI.csproj|c:\\work\\tutorials\\tech_review\\tech_exercise_v.0.0.4\\tech_exercise\\package\\exercise1\\api\\business\\dtos\\personastronaut.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9EA080BF-FDF5-4E6C-A9E4-BBCCD62C91D9}|..\\..\\api\\StargateAPI.csproj|c:\\work\\tutorials\\tech_review\\tech_exercise_v.0.0.4\\tech_exercise\\package\\exercise1\\api\\controllers\\astronautdutycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9EA080BF-FDF5-4E6C-A9E4-BBCCD62C91D9}|StargateAPI.csproj|c:\\work\\tutorials\\tech_review\\tech_exercise_v.0.0.4\\tech_exercise\\package\\exercise1\\api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9EA080BF-FDF5-4E6C-A9E4-BBCCD62C91D9}|..\\..\\api\\StargateAPI.csproj|c:\\work\\tutorials\\tech_review\\tech_exercise_v.0.0.4\\tech_exercise\\package\\exercise1\\api\\controllers\\personcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9EA080BF-FDF5-4E6C-A9E4-BBCCD62C91D9}|..\\..\\api\\StargateAPI.csproj|c:\\work\\tutorials\\tech_review\\tech_exercise_v.0.0.4\\tech_exercise\\package\\exercise1\\api\\business\\migrations\\stargatecontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9EA080BF-FDF5-4E6C-A9E4-BBCCD62C91D9}|..\\..\\api\\StargateAPI.csproj|c:\\work\\tutorials\\tech_review\\tech_exercise_v.0.0.4\\tech_exercise\\package\\exercise1\\api\\business\\queries\\getpeople.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9EA080BF-FDF5-4E6C-A9E4-BBCCD62C91D9}|..\\..\\api\\StargateAPI.csproj|c:\\work\\tutorials\\tech_review\\tech_exercise_v.0.0.4\\tech_exercise\\package\\exercise1\\api\\business\\data\\person.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9EA080BF-FDF5-4E6C-A9E4-BBCCD62C91D9}|..\\..\\api\\StargateAPI.csproj|c:\\work\\tutorials\\tech_review\\tech_exercise_v.0.0.4\\tech_exercise\\package\\exercise1\\api\\controllers\\baseresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9EA080BF-FDF5-4E6C-A9E4-BBCCD62C91D9}|..\\..\\api\\StargateAPI.csproj|c:\\work\\tutorials\\tech_review\\tech_exercise_v.0.0.4\\tech_exercise\\package\\exercise1\\api\\controllers\\controllerbaseextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:133:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:133:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{e8b06f52-6d01-11d2-aa7d-00c04f990343}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:132:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "GetAstronautDutiesByName.cs",
+              "DocumentMoniker": "C:\\Work\\Tutorials\\tech_review\\tech_exercise_v.0.0.4\\tech_exercise\\package\\exercise1\\api\\Business\\Queries\\GetAstronautDutiesByName.cs",
+              "RelativeDocumentMoniker": "..\\..\\api\\Business\\Queries\\GetAstronautDutiesByName.cs",
+              "ToolTip": "C:\\Work\\Tutorials\\tech_review\\tech_exercise_v.0.0.4\\tech_exercise\\package\\exercise1\\api\\Business\\Queries\\GetAstronautDutiesByName.cs",
+              "RelativeToolTip": "..\\..\\api\\Business\\Queries\\GetAstronautDutiesByName.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAArwCsAAAA1AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-13T13:49:25.512Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CreateAstronautDuty.cs",
+              "DocumentMoniker": "C:\\Work\\Tutorials\\tech_review\\tech_exercise_v.0.0.4\\tech_exercise\\package\\exercise1\\api\\Business\\Commands\\CreateAstronautDuty.cs",
+              "RelativeDocumentMoniker": "..\\..\\api\\Business\\Commands\\CreateAstronautDuty.cs",
+              "ToolTip": "C:\\Work\\Tutorials\\tech_review\\tech_exercise_v.0.0.4\\tech_exercise\\package\\exercise1\\api\\Business\\Commands\\CreateAstronautDuty.cs*",
+              "RelativeToolTip": "..\\..\\api\\Business\\Commands\\CreateAstronautDuty.cs*",
+              "ViewState": "AQIAABUAAAAAAAAAAIA2wC4AAAA6AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-13T08:48:21.579Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "PersonAstronaut.cs",
+              "DocumentMoniker": "C:\\Work\\Tutorials\\tech_review\\tech_exercise_v.0.0.4\\tech_exercise\\package\\exercise1\\api\\Business\\Dtos\\PersonAstronaut.cs",
+              "RelativeDocumentMoniker": "..\\..\\api\\Business\\Dtos\\PersonAstronaut.cs",
+              "ToolTip": "C:\\Work\\Tutorials\\tech_review\\tech_exercise_v.0.0.4\\tech_exercise\\package\\exercise1\\api\\Business\\Dtos\\PersonAstronaut.cs",
+              "RelativeToolTip": "..\\..\\api\\Business\\Dtos\\PersonAstronaut.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAIAAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-12T19:37:24.43Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "StargateContextModelSnapshot.cs",
+              "DocumentMoniker": "C:\\Work\\Tutorials\\tech_review\\tech_exercise_v.0.0.4\\tech_exercise\\package\\exercise1\\api\\Business\\Migrations\\StargateContextModelSnapshot.cs",
+              "RelativeDocumentMoniker": "..\\..\\api\\Business\\Migrations\\StargateContextModelSnapshot.cs",
+              "ToolTip": "C:\\Work\\Tutorials\\tech_review\\tech_exercise_v.0.0.4\\tech_exercise\\package\\exercise1\\api\\Business\\Migrations\\StargateContextModelSnapshot.cs",
+              "RelativeToolTip": "..\\..\\api\\Business\\Migrations\\StargateContextModelSnapshot.cs",
+              "ViewState": "AQIAABMAAAAAAAAAAAAgwA8AAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-13T07:19:41.905Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "GetPeople.cs",
+              "DocumentMoniker": "C:\\Work\\Tutorials\\tech_review\\tech_exercise_v.0.0.4\\tech_exercise\\package\\exercise1\\api\\Business\\Queries\\GetPeople.cs",
+              "RelativeDocumentMoniker": "..\\..\\api\\Business\\Queries\\GetPeople.cs",
+              "ToolTip": "C:\\Work\\Tutorials\\tech_review\\tech_exercise_v.0.0.4\\tech_exercise\\package\\exercise1\\api\\Business\\Queries\\GetPeople.cs",
+              "RelativeToolTip": "..\\..\\api\\Business\\Queries\\GetPeople.cs",
+              "ViewState": "AQIAAA0AAAAAAAAAAAA1wBgAAADDAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-12T20:39:44.836Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Person.cs",
+              "DocumentMoniker": "C:\\Work\\Tutorials\\tech_review\\tech_exercise_v.0.0.4\\tech_exercise\\package\\exercise1\\api\\Business\\Data\\Person.cs",
+              "RelativeDocumentMoniker": "..\\..\\api\\Business\\Data\\Person.cs",
+              "ToolTip": "C:\\Work\\Tutorials\\tech_review\\tech_exercise_v.0.0.4\\tech_exercise\\package\\exercise1\\api\\Business\\Data\\Person.cs",
+              "RelativeToolTip": "..\\..\\api\\Business\\Data\\Person.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAAAcAAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-12T20:07:25.129Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AstronautDutyController.cs",
+              "DocumentMoniker": "C:\\Work\\Tutorials\\tech_review\\tech_exercise_v.0.0.4\\tech_exercise\\package\\exercise1\\api\\Controllers\\AstronautDutyController.cs",
+              "RelativeDocumentMoniker": "..\\..\\api\\Controllers\\AstronautDutyController.cs",
+              "ToolTip": "C:\\Work\\Tutorials\\tech_review\\tech_exercise_v.0.0.4\\tech_exercise\\package\\exercise1\\api\\Controllers\\AstronautDutyController.cs",
+              "RelativeToolTip": "..\\..\\api\\Controllers\\AstronautDutyController.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAAB4AAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-12T19:37:20.17Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "BaseResponse.cs",
+              "DocumentMoniker": "C:\\Work\\Tutorials\\tech_review\\tech_exercise_v.0.0.4\\tech_exercise\\package\\exercise1\\api\\Controllers\\BaseResponse.cs",
+              "RelativeDocumentMoniker": "..\\..\\api\\Controllers\\BaseResponse.cs",
+              "ToolTip": "C:\\Work\\Tutorials\\tech_review\\tech_exercise_v.0.0.4\\tech_exercise\\package\\exercise1\\api\\Controllers\\BaseResponse.cs",
+              "RelativeToolTip": "..\\..\\api\\Controllers\\BaseResponse.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-12T19:37:16.929Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CreatePerson.cs",
+              "DocumentMoniker": "C:\\Work\\Tutorials\\tech_review\\tech_exercise_v.0.0.4\\tech_exercise\\package\\exercise1\\api\\Business\\Commands\\CreatePerson.cs",
+              "RelativeDocumentMoniker": "..\\..\\api\\Business\\Commands\\CreatePerson.cs",
+              "ToolTip": "C:\\Work\\Tutorials\\tech_review\\tech_exercise_v.0.0.4\\tech_exercise\\package\\exercise1\\api\\Business\\Commands\\CreatePerson.cs",
+              "RelativeToolTip": "..\\..\\api\\Business\\Commands\\CreatePerson.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAWwBgAAABVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-12T16:00:06.521Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ControllerBaseExtensions.cs",
+              "DocumentMoniker": "C:\\Work\\Tutorials\\tech_review\\tech_exercise_v.0.0.4\\tech_exercise\\package\\exercise1\\api\\Controllers\\ControllerBaseExtensions.cs",
+              "RelativeDocumentMoniker": "..\\..\\api\\Controllers\\ControllerBaseExtensions.cs",
+              "ToolTip": "C:\\Work\\Tutorials\\tech_review\\tech_exercise_v.0.0.4\\tech_exercise\\package\\exercise1\\api\\Controllers\\ControllerBaseExtensions.cs",
+              "RelativeToolTip": "..\\..\\api\\Controllers\\ControllerBaseExtensions.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAwAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-12T15:05:22.179Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "PersonController.cs",
+              "DocumentMoniker": "C:\\Work\\Tutorials\\tech_review\\tech_exercise_v.0.0.4\\tech_exercise\\package\\exercise1\\api\\Controllers\\PersonController.cs",
+              "RelativeDocumentMoniker": "..\\..\\api\\Controllers\\PersonController.cs",
+              "ToolTip": "C:\\Work\\Tutorials\\tech_review\\tech_exercise_v.0.0.4\\tech_exercise\\package\\exercise1\\api\\Controllers\\PersonController.cs",
+              "RelativeToolTip": "..\\..\\api\\Controllers\\PersonController.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAEMAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-12T14:52:48.342Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Work\\Tutorials\\tech_review\\tech_exercise_v.0.0.4\\tech_exercise\\package\\exercise1\\api\\Program.cs",
+              "RelativeDocumentMoniker": "..\\..\\api\\Program.cs",
+              "ToolTip": "C:\\Work\\Tutorials\\tech_review\\tech_exercise_v.0.0.4\\tech_exercise\\package\\exercise1\\api\\Program.cs",
+              "RelativeToolTip": "..\\..\\api\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-11T17:58:57.746Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 1986,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{5a4e9529-b6a0-46b5-be4f-0f0b239bc0eb}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{a80febb4-e7e0-4147-b476-21aaf2453969}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 800,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{004be353-6879-467c-9d1e-9ac23cdf6d49}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

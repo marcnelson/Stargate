@@ -29,11 +29,17 @@ namespace StargateAPI.Business.Queries
 
             var person = await _context.Connection.QueryFirstOrDefaultAsync<PersonAstronaut>(query);
 
+            if (person is null) throw new BadHttpRequestException("Bad Request");
+
             result.Person = person;
 
-            query = $"SELECT * FROM [AstronautDuty] WHERE {person.PersonId} = PersonId Order By DutyStartDate Desc";
+            query = $"SELECT * FROM [AstronautDuty] WHERE {person.PersonId} = PersonId Order By DutyStartDate Desc, Id Desc";
 
             var duties = await _context.Connection.QueryAsync<AstronautDuty>(query);
+
+            if(!duties.Any()) throw new BadHttpRequestException("Bad Request");
+
+            if(!duties.First().DutyTitle.Equals("RETIRED") && duties.First().DutyEndDate is not null) throw new BadHttpRequestException("Bad Request");
 
             result.AstronautDuties = duties.ToList();
 
