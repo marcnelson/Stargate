@@ -1,6 +1,7 @@
 import { Component, ElementRef, OnDestroy, OnInit, ViewChild  } from '@angular/core';
 import { DemoService } from './demo.service';
 import { takeUntil, filter, tap } from 'rxjs';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-demo',
@@ -11,14 +12,15 @@ export class DemoComponent implements OnInit, OnDestroy {
 
   astronauts: any[] = [];
   astronautResult: any;
+  // astronautApiParam: any = { name: '' };
   constructor(private readonly demoService: DemoService) {}
   
   ngOnInit(){
     this.astronaut$.subscribe();
   }
 
-  onClick(): void{
-    this.demoService.getAstronaut();
+  onClick(name: string): void{
+    this.demoService.getAstronaut(name);
   }
 
   onSelectionChange(): void{

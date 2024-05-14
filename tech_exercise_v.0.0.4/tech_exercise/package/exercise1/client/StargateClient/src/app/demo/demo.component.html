@@ -5,9 +5,10 @@
     <option *ngFor="let astronaut of astronauts" [value]="astronaut.name">{{ astronaut.name }}</option>
 </select> -->
 
-<!-- <input type="text" [(ngModel)]="astronaut.name" placeholder="Enter Astronaut's Name"> -->
+<!-- <input type="text" [(ngModel)]="astronautApiParam.name" placeholder="Enter Astronaut's Name"> -->
+<input type="text" #name placeholder="Enter Astronaut's Name">
 
-<button (click)="onClick()">Click to make api call</button>
+<button (click)="onClick(name.value)">Click to make api call for Astronaut Reggie</button>
 
 <br />{{astronautResult}}
  
