@@ -10,14 +10,13 @@ export class DemoService {
   constructor(private http: HttpClient) { }
 
   // Astronauts
-  private _astronautsSubject$ = new BehaviorSubject<any[]>([]);
-  public readonly astronauts$ = this._astronautsSubject$.asObservable();
-  getAllAstronauts() {
+  private _astronautSubject$ = new BehaviorSubject<any[]>([]);
+  public readonly astronaut$ = this._astronautSubject$.asObservable();
+  getAstronaut() {
     this.http.get<any[]>("https://localhost:7204/AstronautDuty/Reggie")
       .pipe(filter((validObj) => !!validObj))
       .subscribe((returnObj: any[]) => {
-        debugger;
-        this._astronautsSubject$.next(returnObj);
+        this._astronautSubject$.next(returnObj);
       });
   }
 }

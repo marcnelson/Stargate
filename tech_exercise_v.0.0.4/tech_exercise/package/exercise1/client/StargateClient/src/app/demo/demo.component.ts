@@ -10,6 +10,7 @@ import { takeUntil, filter, tap } from 'rxjs';
 export class DemoComponent implements OnInit, OnDestroy {
 
   astronauts: any[] = [];
+  astronautResult: any;
   constructor(private readonly demoService: DemoService) {}
   
   ngOnInit(){
@@ -17,7 +18,7 @@ export class DemoComponent implements OnInit, OnDestroy {
   }
 
   onClick(): void{
-    this.demoService.getAllAstronauts();
+    this.demoService.getAstronaut();
   }
 
   onSelectionChange(): void{
@@ -28,10 +29,9 @@ export class DemoComponent implements OnInit, OnDestroy {
     
   }
 
-  astronaut$ = this.demoService.astronauts$.pipe(
-    tap((astronauts: any[]) => {
-      debugger;
-      this.astronauts = astronauts;
+  astronaut$ = this.demoService.astronaut$.pipe(
+    tap((astronaut: any[]) => {
+      this.astronautResult = JSON.stringify(astronaut);
     }),
   );
 }
