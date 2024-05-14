@@ -22,8 +22,6 @@ namespace StargateAPI.Business.Commands
         {
             if (request is null) throw new ArgumentNullException(nameof(request), "Request object cannot be null.");
 
-            if (cancellationToken == default) throw new ArgumentException("Invalid cancellation token.", nameof(cancellationToken));
-
             var person = _context.People.AsNoTracking().FirstOrDefault(z => z.Name == request.Name);
 
             if (person is not null) throw new BadHttpRequestException("Bad Request");
@@ -43,8 +41,6 @@ namespace StargateAPI.Business.Commands
         public async Task<CreatePersonResult> Handle(CreatePerson request, CancellationToken cancellationToken)
         {
             if (request is null) throw new ArgumentNullException(nameof(request), "Request object cannot be null.");
-
-            if (cancellationToken == default) throw new ArgumentException("Invalid cancellation token.", nameof(cancellationToken));
 
             var newPerson = new Person()
             {

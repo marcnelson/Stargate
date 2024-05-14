@@ -24,8 +24,6 @@ namespace StargateAPI.Business.Queries
         {
             if (request is null) throw new ArgumentNullException(nameof(request), "Request object cannot be null.");
 
-            if (cancellationToken == default) throw new ArgumentException("Invalid cancellation token.", nameof(cancellationToken));
-
             var result = new GetAstronautDutiesByNameResult();
 
             var query = $"SELECT a.Id as PersonId, a.Name, b.CurrentRank, b.CurrentDutyTitle, b.CareerStartDate, b.CareerEndDate FROM [Person] a LEFT JOIN [AstronautDetail] b on b.PersonId = a.Id WHERE \'{request.Name}\' = a.Name";
