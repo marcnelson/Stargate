@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DemoComponent } from './demo.component';
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -9,7 +10,10 @@ import { DemoComponent } from './demo.component';
     DemoComponent
   ],
   imports: [
-    CommonModule
+    CommonModule, 
+    FormsModule, 
+    ReactiveFormsModule,
+    HttpClientModule
   ]
 })
 export class DemoModule { }

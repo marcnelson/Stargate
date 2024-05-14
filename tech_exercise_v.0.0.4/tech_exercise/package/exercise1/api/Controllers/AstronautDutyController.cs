@@ -3,7 +3,6 @@ using Microsoft.AspNetCore.Mvc;
 using StargateAPI.Business.Commands;
 using StargateAPI.Business.Queries;
 using System.Net;
-using System.Threading;
 
 namespace StargateAPI.Controllers
 {
@@ -12,9 +11,11 @@ namespace StargateAPI.Controllers
     public class AstronautDutyController : ControllerBase
     {
         private readonly IMediator _mediator;
-        public AstronautDutyController(IMediator mediator)
+        private readonly ILogger<CreateAstronautDutyPreProcessor> _logger;
+        public AstronautDutyController(IMediator mediator, ILogger<CreateAstronautDutyPreProcessor> logger)
         {
             _mediator = mediator;
+            _logger = logger;
         }
 
         [HttpGet("{name}")]
@@ -29,10 +30,15 @@ namespace StargateAPI.Controllers
                     Name = name
                 });
 
+                _logger.LogInformation("Get astronaut duties by name was successfully handled for {RequestName}.", name);
+
                 return this.GetResponse(result);
             }
             catch (Exception ex)
             {
+                // Log exception
+                _logger.LogError(ex, "Error handling astronaut duty for {RequestName}.", name ?? "Unknown");
+
                 return this.GetResponse(new BaseResponse()
                 {
                     Message = ex.Message,
@@ -45,11 +51,24 @@ namespace StargateAPI.Controllers
         [HttpPost("")]
         public async Task<IActionResult> CreateAstronautDuty([FromBody] CreateAstronautDuty request)
         {
-            if (request is null) throw new ArgumentNullException(nameof(request), "Request object cannot be null.");
+            try
+            {
+                if (request is null) throw new ArgumentNullException(nameof(request), "Request object cannot be null.");
 
-            var result = await _mediator.Send(request);
+                var result = await _mediator.Send(request);
 
-            return this.GetResponse(result);           
+                _logger.LogInformation("Creating astronaut duty by name was successfully handled for {RequestName}.", request.Name);
+
+                return this.GetResponse(result);
+            }
+            catch (Exception ex)
+            {
+                // Log exception
+                _logger.LogError(ex, "Error creating astronaut duty for {RequestName}.", request?.Name ?? "Unknown");
+
+                // Rethrow the exception to propagate it
+                throw;
+            }
         }
     }
 }

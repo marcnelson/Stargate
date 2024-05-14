@@ -1,4 +1,6 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, ElementRef, OnDestroy, OnInit, ViewChild  } from '@angular/core';
+import { DemoService } from './demo.service';
+import { takeUntil, filter, tap } from 'rxjs';
 
 @Component({
   selector: 'app-demo',
@@ -7,32 +9,29 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 })
 export class DemoComponent implements OnInit, OnDestroy {
 
-  options: any[] = []; // Array to store dropdown options retrieved from API
-  selectedOption: any; // Property to store the selected option
-
-  constructor() { }
+  astronauts: any[] = [];
+  constructor(private readonly demoService: DemoService) {}
   
   ngOnInit(){
-    this.fetchOptions();
+    this.astronaut$.subscribe();
   }
 
   onClick(): void{
-    alert("tada");
-  }
-
-  fetchOptions(): void {
-    // Call your API service to fetch options
-    // this.apiService.getOptions().subscribe((data: any[]) => {
-    //   this.options = data; // Assign API response to options array
-    // });
+    this.demoService.getAllAstronauts();
   }
 
   onSelectionChange(): void{
     alert("Do Something!  A record was just selected.")
-
   }
 
   ngOnDestroy(): void {
     
   }
+
+  astronaut$ = this.demoService.astronauts$.pipe(
+    tap((astronauts: any[]) => {
+      debugger;
+      this.astronauts = astronauts;
+    }),
+  );
 }

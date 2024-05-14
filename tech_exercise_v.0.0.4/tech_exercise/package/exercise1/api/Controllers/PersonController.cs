@@ -6,15 +6,17 @@ using System.Net;
 
 namespace StargateAPI.Controllers
 {
-   
+
     [ApiController]
     [Route("[controller]")]
     public class PersonController : ControllerBase
     {
         private readonly IMediator _mediator;
-        public PersonController(IMediator mediator)
+        private readonly ILogger<CreateAstronautDutyPreProcessor> _logger;
+        public PersonController(IMediator mediator, ILogger<CreateAstronautDutyPreProcessor> logger)
         {
             _mediator = mediator;
+            _logger = logger;
         }
 
         [HttpGet("")]
@@ -27,10 +29,15 @@ namespace StargateAPI.Controllers
 
                 });
 
+                _logger.LogInformation("Getting people was successful");
+
                 return this.GetResponse(result);
             }
             catch (Exception ex)
             {
+                // Log exception
+                _logger.LogError(ex, "Error getting people");
+
                 return this.GetResponse(new BaseResponse()
                 {
                     Message = ex.Message,
@@ -52,10 +59,15 @@ namespace StargateAPI.Controllers
                     Name = name
                 });
 
+                _logger.LogInformation("Getting person was successful for {RequestName}.", name);
+
                 return this.GetResponse(result);
             }
             catch (Exception ex)
             {
+                // Log exception
+                _logger.LogError(ex, "Error getting person by name for {RequestName}.", name);
+
                 return this.GetResponse(new BaseResponse()
                 {
                     Message = ex.Message,
@@ -77,10 +89,15 @@ namespace StargateAPI.Controllers
                     Name = name
                 });
 
+                _logger.LogInformation("Creating person was successful for {RequestName}.", name);
+
                 return this.GetResponse(result);
             }
             catch (Exception ex)
             {
+                // Log exception
+                _logger.LogError(ex, "Error creating person by name for {RequestName}.", name);
+
                 return this.GetResponse(new BaseResponse()
                 {
                     Message = ex.Message,
